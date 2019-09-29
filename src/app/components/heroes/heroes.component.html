@@ -1,0 +1,13 @@
+<h1>Héroes <small>Marvel y DC</small></h1>
+<hr>
+
+<div class="card-columns">
+    <!-- Con esto se llama al html del componente heroe-tarjeta -->
+    <!-- El "[heroe]="personaje" esta diciendo que el objeto "heroe" de heroe-tarjeta va a recibir los valores del personaje de la lista heroes(el usado en el for).
+    Todo esto gracias al @Input() heroe de heroe-tarjeta.component.ts -->
+    <!-- (heroeSeleccionado) indica que se queda a la espera del evento heroeSeleccionado.
+        "($event)" espera recibir lo que emite heroeSeleccionado, que en este caso es el indice, que es justo lo que espera el metodo 
+        "verHeroe" de heroes.component.ts -->
+    <app-heroe-tarjeta [heroe]="personaje" [indice]="i" (heroeSeleccionado)="verHeroe($event)" *ngFor="let personaje of heroes;let i=index"></app-heroe-tarjeta>
+
+</div>

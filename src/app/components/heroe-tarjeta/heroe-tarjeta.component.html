@@ -1,0 +1,21 @@
+<div class="card animated fadeIn fast">
+    <!--*ngFor crea, mediante un bucle, todos los elementos tarjeta de los heroes del array y devuelve la variable i que es la posicion en el array.
+                "heroes" es la variable de heroes.component.ts -->
+    <img class="card-img-top img-fluid" [src]="heroe.img" [alt]="heroe.nombre">
+    <div class="card-body">
+        <h5 class="card-title">{{heroe.nombre}}</h5>
+        <p class="card-text">{{heroe.bio}}</p>
+        <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+    </div>
+
+    <!-- <button type="button" class="btn btn-outline-primary btn-block">
+                Ver más...
+            </button> -->
+    <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver más...</a> -->
+
+    <!-- El siguiente botón llama al método verHeroe(i) al hacer click -->
+    <button (click)="verHeroe()" type="button" class="btn btn-outline-primary btn-block">
+                Ver más...
+            </button>
+
+</div>
